@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
+{%extends 'base.html'%}
 {%block content%}
 <body>
-  <h3 class="text.uppercase text-warning" style:"letter-spacing: 2px;">CATEGORY - {{category}}</h3>
+  <h3 class="text.uppercase text-warning" style:"letter-spacing: 2px;">Results for - {{keyword}}</h3>
   <div class="row mb-2">
-  {%if posts%}
-    {%for post in posts%}
+  {%if blogs%}
+    {%for post in blogs%}
       <div class="col-md-6">
         <div class="card border-0" >
           <div class="card-body">
@@ -20,5 +20,4 @@
   {%endif%}
   </div>
 </body>
-
 {%endblock%}
