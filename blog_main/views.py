@@ -18,7 +18,7 @@ def register(request):
         form = RegistrationFrom(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('register')
+            return redirect('login')
         else:
             print(form.errors)
     else:
@@ -46,4 +46,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('home')
+    return redirect('dashboard')
